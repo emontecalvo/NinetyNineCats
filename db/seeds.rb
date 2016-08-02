@@ -1,0 +1,5 @@
+Cat.create!(name: "hulu", birth_date: Date.new(2014,1,2), color: 'white', sex: 'M', description: 'Hulu rocks!!!!!')
+Cat.create!(name: "bobby", birth_date: Date.new(2013,1,2), color: 'black', sex: 'M', description: 'Bobby is ok')
+Cat.create!(name: "sarah", birth_date: Date.new(2012,5,2), color: 'orange', sex: 'F', description: 'Sarah is friendly!!!!!')
+Cat.create!(name: "mondo", birth_date: Date.new(2011,11,2), color: 'tabby', sex: 'M', description: 'Mondo eats a lot of food!!!!!')
+Cat.create!(name: "princess", birth_date: Date.new(2014,1,2), color: 'white', sex: 'F', description: 'princess sleeps a lot!!!!!')

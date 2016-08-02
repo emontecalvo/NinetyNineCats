@@ -1,0 +1,38 @@
+<form action="/cats" method="post">
+   <input type="hidden" name="_method" value="PATCH">
+
+
+  <label>Name
+    <input type="text" name="cat[name]" value=<%=@cat.name%>>
+  </label>
+  <br>
+  <label>Sex
+    <input type="radio" name="cat[sex]" value="M" <%="checked" if @cat.sex == "M"%>>Male
+    <input type="radio" name="cat[sex]" value="F" <%="checked" if @cat.sex == "F"%>>Female
+  </label>
+ <br>
+  <label>Color
+    <select name="cat[color]">
+        <!-- <option value="Select Color" disabled="true" selected="true">Select Color</option> -->
+        <% color = @cat.color %>
+        <option value="white" <%= "selected='true'" if color == "white"%> >White</option>
+        <option value="black" <%= "selected='true'" if color == "black"%>>Black</option>
+        <option value="orange" <%= "selected='true'" if color == "orange"%>>Orange</option>
+        <option value="tabby" <%= "selected='true'" if color == "tabby"%>>Tabby</option>
+        <option value="tortishell" <%= "selected='true'" if color == "tortishell"%>>tortishell</option>
+    </select>
+  </label>
+  <br>
+
+  <label>Birthdate
+    <input type="date" name="cat[birth_date]" value=<%= @cat.birth_date%>>
+  </label>
+  <br>
+
+  <label>Description
+    <textarea name="cat[description]" cols="30" rows="10"><%=@cat.description%></textarea>
+  </label>
+
+  <input type="submit" value="Create Cat!">
+
+</form>

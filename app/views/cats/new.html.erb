@@ -1,0 +1,42 @@
+<!-- Use text for name.
+Use radio buttons for sex.
+Use a drop down for color.
+Use a blank <option> as the default color; this will force the user to consciously pick one.
+You can use the date input type to prompt the user to pick a birth date. Look this up on MDN.
+Use a textarea tag for the description. -->
+
+
+<form action="/cats" method="post">
+  <label>Name
+    <input type="text" name="cat[name]">
+  </label>
+  <br>
+  <label>Sex
+    <input type="radio" name="cat[sex]" value="M" checked>Male
+    <input type="radio" name="cat[sex]" value="F">Female
+  </label>
+ <br>
+  <label>Color
+    <select name="cat[color]">
+        <option value="Select Color" disabled="true" selected="true">Select Color</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="orange">Orange</option>
+        <option value="tabby">Tabby</option>
+        <option value="tortishell">tortishell</option>
+    </select>
+  </label>
+  <br>
+
+  <label>Birthdate
+    <input type="date" name="cat[birth_date]">
+  </label>
+  <br>
+
+  <label>Description
+    <textarea name="cat[description]" cols="30" rows="10"></textarea>
+  </label>
+
+  <input type="submit" value="Create Cat!">
+
+</form>
