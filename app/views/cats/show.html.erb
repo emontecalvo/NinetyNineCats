@@ -24,3 +24,8 @@
     <td> <%= @cat.description %> </td>
   </tr>
 </table>
+
+<form action=<%=cat_url(@cat)%> method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Cat!">
+</form>

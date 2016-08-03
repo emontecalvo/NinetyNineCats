@@ -4,8 +4,9 @@ Use a drop down for color.
 Use a blank <option> as the default color; this will force the user to consciously pick one.
 You can use the date input type to prompt the user to pick a birth date. Look this up on MDN.
 Use a textarea tag for the description. -->
+<%= render "form", action: :new, cat: @cat %>
 
-
+<!--
 <form action="/cats" method="post">
   <label>Name
     <input type="text" name="cat[name]">
@@ -39,4 +40,4 @@ Use a textarea tag for the description. -->
 
   <input type="submit" value="Create Cat!">
 
-</form>
+</form> -->

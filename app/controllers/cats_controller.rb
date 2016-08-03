@@ -10,6 +10,7 @@ class CatsController < ApplicationController
   end
 
   def new
+    @cat = Cat.new(name: '', birth_date: '', color: '', sex: 'M')
     render :new
   end
 
@@ -37,8 +38,16 @@ class CatsController < ApplicationController
     else
       render :edit
     end
+  end
 
+  def destroy
+    @cat = Cat.find(params[:id])
 
+    if @cat.destroy!
+      redirect_to "/cats"
+    else
+      flash[:error] = "We were unable to destroy the Item"
+    end
   end
 
   private
